@@ -1,0 +1,580 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1626346649512-2ab1366aa5b4");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.profile-card {
+  width: 90%; /* Lebar default 90% agar lebih responsif */
+  max-width: 500px; /* Batas maksimal lebar pada layar besar */
+  margin: 50px auto; /* Jarak atas dan bawah 50px, dan tengah pada sumbu horizontal */
+  padding: 20px;
+  border-radius: 20px;
+
+  background-size: 70%; /* Menyesuaikan ukuran background dengan 70% dari ukuran aslinya */
+  background-repeat: no-repeat; /* Mencegah pengulangan gambar latar belakang */
+  background-position: center; /* Memposisikan gambar latar belakang di tengah */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #0b010152;
+  text-align: center;
+}
+
+/* Untuk gambar dalam profile-card */
+.profile-card img {
+  width: 100px; /* Lebar gambar diatur menjadi 100px */
+  height: 100px; /* Tinggi gambar juga diatur menjadi 100px untuk memastikan bentuk bulat */
+  border-radius: 50%; /* Membuat gambar menjadi bulat sempurna */
+  object-fit: cover; /* Gambar akan menyesuaikan agar mengisi seluruh area dengan proporsi yang tepat */
+  margin-bottom: 20px;
+}
+
+/* Untuk teks judul */
+.profile-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+/* Untuk link sosial */
+.social-links {
+  display: flex;
+  justify-content: center;
+  font-style: normal;
+  font-size: small;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #d3720a;
+}
+
+.social-links .icon {
+  margin-right: 5px;
+}
+
+/* Media query untuk perangkat mobile */
+@media (max-width: 600px) {
+  .profile-card {
+    width: 100%; /* Lebar di perangkat mobile akan lebih besar */
+    margin: 20px auto; /* Kurangi jarak atas dan bawah */
+    padding: 15px; /* Kurangi padding untuk layar kecil */
+  }
+
+  .profile-card h2 {
+    font-size: 24px; /* Kurangi ukuran teks untuk layar kecil */
+  }
+
+  .social-links a {
+    margin: 0 5px; /* Kurangi margin antar ikon di layar kecil */
+  }
+}
+
+.page-separator {
+  margin: 10px 0; /* Atur jarak vertikal (atas dan bawah) */
+  border-top: 2px solid #ffffff; /* Garis pemisah */
+  width: 100%; /* Lebar garis pemisah */
+  margin-left: auto; /* Pusatkan garis pemisah */
+  margin-right: auto; /* Pusatkan garis pemisah */
+}
+
+/*pembatas*/
+
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fffefe;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background-color: #000101;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+.profile-info h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+/* About Me Section */
+.about-me {
+  padding: 40px 0;
+  background-color: white;
+  text-align: center;
+}
+
+.about-me h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.about-me p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 40px 0;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.skills-section h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.skill-card {
+  display: inline-block;
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 150px;
+}
+
+.skill-card i {
+  font-size: 2em;
+  color: #007bff;
+}
+
+.skill-card span {
+  display: block;
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+/* Portfolio Section */
+.portfolio {
+  padding: 40px 0;
+  background-color: white;
+}
+
+.portfolio h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.image-flexbox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 10px;
+  gap: 10px;
+}
+
+.image-item {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Footer */
+.footer {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icon {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.social-icon:hover {
+  color: #f4f4f4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-info h1 {
+    font-size: 1.5em;
+  }
+
+  .profile-info p {
+    font-size: 1em;
+  }
+
+  .image-item {
+    width: 150px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-info h1 {
+    font-size: 1.2em;
+  }
+
+  .profile-info p {
+    font-size: 0.9em;
+  }
+
+  .image-item {
+    width: 120px;
+    height: 100px;
+  }
+
+  .skills-section {
+    padding: 20px 0;
+  }
+}
+
+/*pembatas*/
+
+.profile-card {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 40px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #fcfafa10;
+}
+.profile-card img {
+  width: 200px;
+  height: 200px;
+}
+
+.image-container {
+  position: relative;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.386); /* Adjust the transparency here */
+  z-index: 1;
+}
+.image-container p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  z-index: 2;
+  margin: 0;
+}
+
+.page-separator {
+  margin: 10px 0; /* Atur jarak vertikal (atas dan bawah) */
+  border-top: 2px solid #ccc; /* Garis pemisah */
+  width: 80%; /* Lebar garis pemisah */
+  margin-left: auto; /* Pusatkan garis pemisah */
+  margin-right: auto; /* Pusatkan garis pemisah */
+}
+
+.about-section {
+  padding: 40px;
+  background-color: #f9f9f9; /* Latar belakang yang lembut */
+  border-radius: 15px; /* Sudut yang membulat untuk tampilan modern */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk efek elevasi */
+  max-width: 800px; /* Batas lebar maksimal */
+  margin: 0 auto; /* Tengah pada layar */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+}
+
+.about-image {
+  width: 120px; /* Ukuran gambar */
+  height: 120px; /* Ukuran gambar */
+  border-radius: 10px; /* Sudut melengkung sedikit */
+  object-fit: cover; /* Mengatur gambar agar tetap proporsional */
+  margin-right: 20px; /* Jarak antara gambar dan teks */
+}
+
+.about-text {
+  flex: 1; /* Membuat teks menempati sisa ruang */
+}
+
+.about-text h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about-text p {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.6; /* Tinggi baris untuk keterbacaan yang lebih baik */
+  color: #666;
+}
+
+/* Responsif untuk layar kecil */
+
+.skills-section {
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 2px solid #ddd; /* Menambahkan border di sekitar section untuk efek tambahan */
+  border-radius: 10px; /* Radius border yang lebih besar */
+}
+
+.skills-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  position: relative; /* Membutuhkan posisi relatif untuk garis bawah */
+  padding-bottom: 10px; /* Menyediakan ruang di bawah teks untuk garis bawah */
+  border-bottom: 3px solid #007bff; /* Garis bawah tebal dengan warna yang mencolok */
+  display: inline-block; /* Agar border-bottom hanya berukuran sesuai dengan teks */
+  font-weight: bold; /* Menebalkan teks */
+}
+
+.skills-section h2::after {
+  content: "";
+  display: block;
+  width: 60px; /* Panjang garis bawah tambahan */
+  height: 4px; /* Ketebalan garis bawah tambahan */
+  background-color: #007bff; /* Warna garis bawah tambahan */
+  margin-top: 5px; /* Jarak antara garis bawah tambahan dan teks */
+  border-radius: 4px; /* Membuat garis bawah tambahan memiliki sudut membulat */
+}
+
+.image-flexbox {
+  display: flex;
+  flex-wrap: nowrap; /* Menghindari gambar membungkus ke baris berikutnya */
+  gap: 10px; /* Spasi antar gambar */
+  justify-content: flex-start; /* Menyusun gambar dari kiri ke kanan */
+  padding: 10px 20px; /* Menambahkan padding pada sisi kiri dan kanan */
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  overflow-x: auto; /* Menambahkan scroll horizontal jika gambar lebih banyak dari lebar kontainer */
+  scrollbar-width: thin; /* Untuk menyesuaikan lebar scrollbar pada browser yang mendukung */
+  scrollbar-color: #888 #f7f7f7; /* Untuk menyesuaikan warna scrollbar pada browser yang mendukung */
+}
+
+.image-item {
+  flex: 0 0 auto; /* Menjaga gambar agar tidak menyusut atau membesar secara otomatis */
+  width: 80px; /* Menentukan lebar gambar */
+  height: 80px; /* Menentukan tinggi gambar */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Memastikan gambar menutupi kontainer tanpa distorsi */
+  display: block;
+  border-radius: 8px;
+}
+
+.image-item:hover {
+  transform: scale(1.1); /* Membesarkan gambar sedikit saat hover */
+}
+
+/* Custom Scrollbar for WebKit Browsers */
+.image-flexbox::-webkit-scrollbar {
+  height: 8px; /* Lebar scrollbar */
+}
+
+.image-flexbox::-webkit-scrollbar-thumb {
+  background-color: #888; /* Warna scrollbar */
+  border-radius: 4px; /* Radius scrollbar */
+}
+
+.image-flexbox::-webkit-scrollbar-track {
+  background-color: #f7f7f7; /* Warna latar belakang scrollbar */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image-item {
+    width: 60px; /* Menyesuaikan ukuran gambar untuk layar yang lebih kecil */
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-item {
+    width: 50px; /* Menyesuaikan ukuran gambar untuk layar yang lebih kecil */
+    height: 50px;
+  }
+}
+
+/*pembatas tabel*/
+
+.table-container {
+  max-width: 100%;
+  overflow-x: auto; /* Untuk scroll horizontal jika tabel melebihi lebar kontainer */
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modern-table {
+  width: 100%;
+  border-collapse: collapse; /* Menghilangkan jarak antar border sel */
+  font-family: "Arial", sans-serif;
+  border-radius: 8px; /* Sudut membulat pada tabel */
+  overflow: hidden; /* Menyembunyikan bagian tabel yang melebihi border-radius */
+}
+
+.modern-table thead {
+  background-color: #007bff; /* Warna latar belakang header tabel */
+  color: #fff; /* Warna teks header tabel */
+}
+
+.modern-table th,
+.modern-table td {
+  padding: 15px; /* Padding sel tabel */
+  text-align: left; /* Menyelaraskan teks ke kiri */
+  border-bottom: 1px solid #ddd; /* Garis pemisah antar baris */
+}
+
+.modern-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Warna latar belakang baris genap */
+}
+
+.modern-table tr:hover {
+  background-color: #f1f1f1; /* Warna latar belakang saat hover */
+}
+
+.modern-table th {
+  font-weight: bold; /* Menebalkan teks header tabel */
+  text-transform: uppercase; /* Mengubah teks menjadi huruf kapital */
+}
+
+.modern-table td {
+  color: #333; /* Warna teks sel tabel */
+}
+
+.modern-table .positive-change {
+  color: #28a745; /* Warna hijau untuk perubahan positif */
+}
+
+.modern-table .negative-change {
+  color: #dc3545; /* Warna merah untuk perubahan negatif */
+}
+
+/*BARISAKHIR*/
+
+/* Footer */
+.footer {
+  background-color: #ffffff;
+  color: rgb(7, 6, 6);
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+.footer .container {
+  width: 90%; /* Membatasi lebar kontainer agar tidak terlalu melebar pada layar besar */
+  max-width: 1200px; /* Lebar maksimal kontainer */
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icon {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.social-icon: hover;
